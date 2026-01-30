@@ -21,7 +21,7 @@ long long derivative = 0;
 
 double Kp = 0.08;
 double Ki = 0.0;
-double Kd = 0.6;
+double Kd = 0.0;
 
 double drive = 0;
 
