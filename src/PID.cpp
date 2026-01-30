@@ -20,13 +20,13 @@ int main() {
     int count = 2;
 
     while (true) {
-        vector <int> sensor;
-        sensor.resize(count);
+        vector <double> sensor;
+        // sensor.resize(count);
 
         for (int i = 0; i < count; i++) {
-            int x;
+            double x;
             cin >> x;
-            sensor[i] = (int) x;
+            sensor[i] = x;
         }
 
         Error = sensor[0] - sensor[1];
