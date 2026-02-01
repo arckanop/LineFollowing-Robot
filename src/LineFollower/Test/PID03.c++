@@ -86,17 +86,14 @@ void setup() {
 	Serial.println("Calibration done!\n");
 
 	digitalWrite(STBY, HIGH);
-
-	setMotor(50, 50);
-
 	delay(500);
 
 	setMotor(0, 0);
 }
 
 void loop() {
-// uint16_t position = QTR.readLineBlack(SensorReadings);
-  uint16_t position = QTR.readLineWhite(SensorReadings);
+	// uint16_t position = QTR.readLineBlack(SensorReadings);
+	uint16_t position = QTR.readLineWhite(SensorReadings);
 
 	int target = 3500;
 	error = target - position;
@@ -117,8 +114,8 @@ void loop() {
 	setMotor(leftSpeed, rightSpeed);
 
 	for (uint8_t i = 0; i < SensorCount; i++) {
-	  Serial.print(SensorReadings[i]);
-	  Serial.print('\t');
+		Serial.print(SensorReadings[i]);
+		Serial.print('\t');
 	}
 
 	Serial.print(position);
