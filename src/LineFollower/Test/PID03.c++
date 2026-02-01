@@ -95,18 +95,18 @@ void loop() {
 	// uint16_t position = QTR.readLineBlack(SensorReadings);
 	uint16_t position = QTR.readLineWhite(SensorReadings);
 
-	int target = 3500;
+	const int target = 3500;
 	error = target - position;
 
 	integral += error;
 	derivative = error - lastError;
 
-	drive = Kp * error + Ki * integral + Kd * derivative;
+	drive = (Kp * error) + (Ki * integral) + (Kd * derivative);
 
 	lastError = error;
 
-		float factor = 1.0 - min(abs(error) / 7000.0, 0.25);
-		int slowBase = baseSpeed * factor;
+	float factor = 1.0 - min(abs(error) / 7000.0, 0.25);
+	int slowBase = baseSpeed * factor;
 
 	int leftSpeed  = slowBase + drive;
 	int rightSpeed = slowBase - drive;
