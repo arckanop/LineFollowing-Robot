@@ -50,7 +50,7 @@ long long derivative = 0;
 
 double Kp = 0.065;
 double Ki = 0; //0.000000001
-double Kd = 0.085;
+double Kd = 0.075;
 
 double drive = 0;
 
@@ -75,13 +75,13 @@ void setup() {
 
 	pinMode(STBY, OUTPUT);
 	digitalWrite(STBY, LOW);
-  pinMode(PWMA, OUTPUT);
-  pinMode(PWMB, OUTPUT);
+    pinMode(PWMA, OUTPUT);
+    pinMode(PWMB, OUTPUT);
 
-  pinMode(AIN1, OUTPUT);
-  pinMode(AIN2, OUTPUT);
-  pinMode(BIN1, OUTPUT);
-  pinMode(BIN2, OUTPUT);
+    pinMode(AIN1, OUTPUT);
+    pinMode(AIN2, OUTPUT);
+    pinMode(BIN1, OUTPUT);
+    pinMode(BIN2, OUTPUT);
 
   // analogWrite(PWMA, 0);
   // analogWrite(PWMB, 0);
