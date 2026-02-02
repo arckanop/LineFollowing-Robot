@@ -54,5 +54,5 @@ void loop() {
   setMotor(40, 40);
   delay(2000);
 
-  setMotor(0, 0)
+  setMotor(0, 0);
 }
