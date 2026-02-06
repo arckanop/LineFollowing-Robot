@@ -83,8 +83,8 @@ void setup() {
     pinMode(BIN1, OUTPUT);
     pinMode(BIN2, OUTPUT);
 
-  // analogWrite(PWMA, 0);
-  // analogWrite(PWMB, 0);
+    // analogWrite(PWMA, 0);
+    // analogWrite(PWMB, 0);
 
 	Serial.println("\n=== CALIBRATING SENSORS ===");
 
